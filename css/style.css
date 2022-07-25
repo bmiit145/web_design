@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+}
+.container{
+    background-image: url(../Img/IMG.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 75vw;
+    height: 100vh;
+    margin: auto;
+}
+body {
+    background-color: peru;
+}
+
+p {
+    color: red;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    text-align: center;
+}
