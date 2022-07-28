@@ -1,0 +1,221 @@
+
+<!DOCTYPE HTML>
+<html ng-app="angular_app">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="BMIIT,Babu Madhav Institute of Information Technology,UTU,UkaTarsadiya University,IT Collage,MSCIT">
+    <meta name="description" content="Babu Madhav Institute of Information Technology">
+    <title>BMIIT | Babu Madhav Institute of Information Technology</title>
+    <link rel="icon" type="image/ico" href="images/bmiitfavicol.ico" />
+    <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <link href="css/style.css" rel='stylesheet' type='text/css' />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <link href="http://fonts.googleapis.com/css?family=Lato:100,200,300,400,500,600,700,800,900"
+        rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+    <link href="css/newstyle.css" rel="stylesheet" type="text/css" />
+
+    <!-- Flash News JS Script -->
+    <script src="js/jquery.marquee.js" type="text/javascript"></script>
+
+    <script src="scripts/angular.min.js" type="text/javascript"></script>
+    <script src="scripts/angular-route.js" type="text/javascript"></script>
+
+    <script src="scripts/app.js" type="text/javascript"></script>
+    <script src="scripts/config.js" type="text/javascript"></script>
+    <script src="scripts/services.js" type="text/javascript"></script>
+    <script src="scripts/filter.js" type="text/javascript"></script>
+
+    <script>
+        /* When the user clicks on the button, 
+         toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- menu -->
+    <div class="header-home">
+        <div class="fixed-header">
+            <div class="logo" style="margin-top: 20px;">
+                <a href="#home">
+                    <span class="main">BMIIT</span> </a>
+            </div>
+            <div class="top-nav">
+                <span class="menu"></span>
+                <ul>
+                    <li class="active"><a href="#home" class="submenu">Home</a></li>
+                    <li><a href="#about" class="submenu">About Us</a></li>
+                    <li>
+                        <div class="dropdown">
+                            <a onclick="myFunction()" class="dropbtn">Student Corner </a>
+                            <div id="myDropdown" class="dropdown-content">
+                                <a href="#BSCITStudentCorner" class="submenu">B.Sc. (IT)</a>
+                                <a href="#material" class="submenu">Integrated M.Sc. (IT)</a>
+                                <a href="CHRONICLES/#/" target="_blank">Magazine</a>
+                                <a href="#Committes" class="submenu">Committees</a>
+                                <a href="#NSS" class="submenu">NSS</a>
+                                <a href="#urbancare" class="submenu">Urban Care</a>
+                                <a href="#StudentUnion" class="submenu">Student Union</a>
+                                <a href="https://app.utu.ac.in/UTUSIS/SIS/Login.aspx">SIS</a>
+                                <a href="#Resources" class="submenu">Resources</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="#staff" class="submenu">Staff</a></li>
+                    <li><a href="#NewsEvent" class="submenu">News & Events</a></li>
+                    <li><a href="#R&DC" class="submenu">R&DC</a></li>
+                    <li><a href="#Placement" class="submenu">Placement</a></li>
+                    <li><a href="#contact" class="submenu">Contact Us</a></li>
+                </ul>
+                <!-- script-nav -->
+                <script>
+                    $("span.menu").click(function () {
+                        $(".top-nav ul").slideToggle(500, function () {
+                        });
+                    });
+                    if ($(window).width() <= 730) {
+                        $(".submenu").click(function () {
+                            $(".menu").click();
+                        });
+                    }
+                </script>
+                <!-- //script-nav -->
+            </div>
+            <div class="clearfix">
+            </div>
+        </div>
+    </div>
+    <!--script-->
+    <script>
+        $(document).ready(function () {
+            $(".top-nav li a").click(function () {
+                $(this).parent().addClass("active");
+                $(this).parent().siblings().removeClass("active");
+            });
+        });
+    </script>
+
+    <div ng-view></div>
+
+    <!-- footer -->
+    <div class="footer wow fadeInRight">
+        <div class="container">
+            <div>
+                <div class="col-sm-3">
+                    <ul class="list1">
+                        <h3>Quick Link</h3>
+                        <li><a href="http://bpkm.org.in/" target="_blank">About BPKM</a></li>
+                        <li><a href="http://utu.ac.in/" target="_blank">Uka Tarsadia University</a></li>
+                        <li><a href="CHRONICLES/#/" target="_blank">Magazine</a></li>
+                        <li><a href="#360">360 View</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <ul class="list1">
+                        <h3>About Us</h3>
+                        <li><a href="#Programme_Cordinator">Programme Coordinator</a></li>
+                        <li><a href="#staff">Staff</a></li>
+                        <li><a href="#NewsEvent">News & Event</a></li>
+                        <li><a href="#NewsEvent">Achievements</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <ul class="list1">
+                        <h3>Useful Links</h3>
+                        <li><a href="#Scholarship_2016_2017">Scholarship</a></li>
+                        <li><a href="http://mail.google.com/a/utu.ac.in" target="_blank">Web Mail</a></li>
+                        <li><a href="http://app.utu.ac.in/UTUSIS/SIS/Login.aspx" target="_blank">SIS</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <ul class="socials">
+                        <li><a href="https://www.facebook.com/mscitdcstutu?fref=ts" target="_blank" title="Join BMIIT on Facebook">
+                            <i class="fa fb fa-facebook"></i></a></li>
+                    </ul>
+                    <ul class="list2">
+                        <li><strong class="phone">
+                            <span class="fa fa-phone"></span>&nbsp;+91 2622 290562<br />
+                            <span class="fa fa-phone hide"></span>&nbsp;+91 2625 290074<br>
+                            <span class="fa fa-phone"></span>&nbsp;Dr. Jitendra Nasriwala, 9825518405<br>
+                            <span class="fa fa-phone"></span>&nbsp;Mr. Sandip Delwadkar, 9328719610<br>
+                            <span class="fa fa-phone"></span>&nbsp;Mr. Hardik Vyas, 9825658143<br>
+                            <span class="fa fa-phone"></span>&nbsp;Mr. Sapan Naik, 9586113399</strong><br>
+                            <small><span class="fa fa-clock-o"></span>&nbsp;9.00AM - 06.00PM</small></li>
+                        <li><a href="mailto:director.bmiit@utu.ac.in"><span class="fa fa-question-circle"></span>
+                            &nbsp;director.bmiit@utu.ac.in</a></li>
+                    </ul>
+                </div>
+                <div class="clearfix">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copy">
+        <p>
+            &copy; 2015 Design by <a href="#" onclick="return false;" title="BMIIT Developer">Hardik
+                    Shah & BMIIT Team</a>
+        </p>
+    </div>
+
+    <!-- Bottom To Top Button -->
+    <a href="#" class="scrollup"></a>
+
+    <script>
+
+        $(document).ready(function () {
+
+            /* Flash News Scroll Managment Used Bellow JS Code */
+            $(".flashnews").marquee({
+                enable: true,
+                direction: 'vertical',
+                itemSelecter: 'li',
+                delay: 3000,
+                speed: 1,
+                timing: 1,
+                mouse: true,
+            });
+            /* End Flash News JS*/
+
+            /* JS Code For Bottom To Top */
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 200) {
+                    $('.scrollup').fadeIn();
+                } else {
+                    $('.scrollup').fadeOut();
+                }
+            });
+
+            $('.scrollup').click(function () {
+                $("html, body").animate({
+                    scrollTop: 0
+                }, 600);
+                return false;
+            });
+            /* End Bottom To Top JS Code */
+
+        });
+    </script>
+
+</body>
+</html>
